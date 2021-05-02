@@ -3,11 +3,11 @@ It is a machine learning application which watch out people's mask and alarm if 
 
 ## How to run the app
 
-1.Either fork or download the app and open the folder in the cli
-2.Install all dependencies using `pip install requirements.txt` command
-3.To start the local sever on your machine set up flask environment and app
-4.Run `export FLASK_APP=app.py` `export FLASK_ENV=development` and the `flask run`. The app will start running on https://localhost:5000/
-5.To use the service of the local host run `python test.py`
+1.Either fork or download the app and open the folder in the cli.
+2.Install all dependencies using `pip install requirements.txt` command.
+3.To start the local sever on your machine set up flask environment and app.
+4.Run `export FLASK_APP=app.py` `export FLASK_ENV=development` and the `flask run`. The app will start running on https://localhost:5000/.
+5.To use the service of the local host run `python test.py`.
 
 ## How to train the machine learning model (optional)
 
