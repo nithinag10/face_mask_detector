@@ -33,5 +33,5 @@ Transfer learning on resnet18 is performed using pytorch. Model with pretrainied
 
 ## Conclusion
 
-There are some complications when to comes to deploying in the real world. In this app, face recognition works fine which is built on resnet. But when it comes to face detection, haar_cascade from cv2 won't do the job greatly. If we use any advanced face detection technique we can definitely put it into real world usage. This can we implemented in CCTV cameras and in other public places.
-It has nice alarm which rings if we don't wear a mask!.
+There are some complications when to comes to deploying in the real world. In this app, face recognition works fine which is built on resnet. But when it comes to face detection, haar_cascade from cv2 won't do the job greatly. If we use any advanced face detection technique we can definitely put it into real world usage. This can be implemented in CCTV in public places where is application has job.
+It has nice alarm which rings if we don't wear a mask!. Try it.
