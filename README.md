@@ -1,8 +1,7 @@
-#Face Mask Detector and alarmer
+# Face Mask Detector and alarmer
 It is a machine learning application which watch out people's mask and alarm if they don't have one. 
 
 ## How to run the app
-
 1.Either fork or download the app and open the folder in the cli.
 2.Install all dependencies using `pip install requirements.txt` command.
 3.To start the local sever on your machine set up flask environment and app.
