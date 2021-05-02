@@ -2,7 +2,7 @@ import cv2
 
 webcam = cv2.VideoCapture(0)
 size = 4
-classifier = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+classifier = cv2.CascadeClassifier('../haarcascade_frontalface_default.xml')
 count = 14
 
 while(True):
