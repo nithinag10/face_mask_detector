@@ -1,4 +1,8 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, Response
+import cv2
+import numpy as np
+import jsonpickle
+from PIL import Image
 
 from util import transform_image, get_prediction
 
@@ -18,21 +22,14 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    if request.method == 'POST':
-        file = request.files.get('file')
-        if file is None or file.filename == "":
-            return jsonify({'error': 'no file'})
-        if not allowed_file(file.filename):
-            return jsonify({'error': 'format not supported'})
-
-        try:
-            img_bytes = file.read()
-            tensor = transform_image(img_bytes)
-            prediction = get_prediction(tensor)
-            data = {'prediction': prediction}
-            return jsonify(data)
-        except:
-            return jsonify({'error': 'error during prediction'})
+    r = request
+    arr = np.frombuffer(r.data, np.uint8)
+    img= cv2.imdecode(arr, cv2.IMREAD_COLOR)
+    data = Image.fromarray(img)
+    tensor = transform_image(data)
+    prediction = get_prediction(tensor)
+    data = {'prediction': prediction}
+    return jsonify(data)
 
 
 if __name__ == "__main__":
